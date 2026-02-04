@@ -1,0 +1,27 @@
+<html>
+<body>
+
+    <h1>OTT Platform Watch Time</h1>
+    <p>Enter the no. of episodes</p>
+    <p><input type="number" id="episodeCount" placeholder="Enter number of episodes"></p>
+    <p>Enter the minutes per episode</p>
+    <p><input type="number" id="minutesPerEpisode" placeholder="Enter minutes per episode"></p>
+    <button onclick="calculateWatchTime()">Calculate Watch Time</button>
+    <p>Calculate the Time Wasted :(</p>
+    <p> </p>
+</body>
+<script>
+    function calculateWatchTime() {
+        const episodeCount = document.getElementById("episodeCount").value;
+        const minutesPerEpisode = document.getElementById("minutesPerEpisode").value;
+        const watchTime = episodeCount * minutesPerEpisode;
+        const wat=watchTime/60
+        document.write(`Total watch time: ${wat} hours`);document.write("<br>");
+        document.write(`Day wasted : ${wat*100/24}.2f %`);document.write("<br>");
+        document.write(`Week wasted: ${wat*100/168} %`);document.write("<br>");
+        document.write(`Month wasted: ${wat*100/720} %`);document.write("<br>");
+        document.write(`Year wasted: ${wat*100/8760} %`);
+
+    }
+</script>
+</html>
